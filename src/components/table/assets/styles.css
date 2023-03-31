@@ -1,0 +1,36 @@
+/* Styling button color red */
+.btn-coustom {
+  background-color: #db0406;
+}
+.btn-coustom:hover {
+  background-color: #ff0000; /* change to the desired hover color */
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.saidBg {
+  background-color: #e7fcf6;
+  color: #ffffff;
+}
+
+.authToken {
+  background-color: #e7f9fc;
+  color: #25b4ca;
+}
+
+.numberBg {
+  background-color: #feffe8;
+  color: #ffffff;
+}
+
+.accessKey{
+  background-color: #E5F3FC;
+  color: #A5D4F3;
+}
+
+th,
+td {
+  padding: 0 10px;
+}
