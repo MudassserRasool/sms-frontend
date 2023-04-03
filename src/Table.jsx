@@ -127,10 +127,19 @@ const handleSave = (e, index) => {
 
 // delete the the row of data
 const handleDelete = index => {
-  if (window.confirm(`Are you sure you want to delete =--> ${credentials[index].country} ${credentials[index].country} ?`)) {
+  if (window.confirm(`Are you sure you want to delete =--> credentials ID =  ${credentials[index]._id} and provider =  ${credentials[index].provider} ?`)) {
     const newDataSource = [...credentials];
-    newDataSource.splice(index, 1);
+    newDataSource.splice(credentials._id, 1);
     setcredentials(newDataSource);
+    // step 1
+    console.log(credentials[index]._id)
+    // step 2 and 3
+    const findIdFromArray = credentials.findIndex((pram)=>{
+      return pram._id===credentials[index]._id;
+    })
+        credentials.splice(findIdFromArray,1)
+    // console.log(credentials)
+   setcredentials(credentials)
   }
 };
 
@@ -239,7 +248,7 @@ navigate('/')
           </Link>
         </div>
 
-        {/* <p>{JSON.stringify(credentials)}</p> */}
+        <p>{JSON.stringify(credentials)}</p>
         {/* Table */}
         <table className="table table-borderless mt-4">
           <thead>
@@ -257,7 +266,7 @@ navigate('/')
           
             {
               credentials.map((cred, index) => (
-                <tr key={index}>
+                <tr key={cred._id}>
                   <td>{index + 1}</td>
                   <td>{cred.country}</td>
                   {cred.enabled === true ? (

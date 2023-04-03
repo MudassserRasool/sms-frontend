@@ -211,14 +211,13 @@ navigate('/table')
                     {/* Countery */}
                     <div className="col-md-12">
                     {/* custom-opacity */}
-                        <select className="form-select form-select-lg "
+                        <select className="form-select form-select-lg custom-opacity"
                             // placeholder='Country'
                             name='country'
                             value={formData.country}
                             onChange={handleInputChange}
-                            placeholder='place Select Countery'
                         >
-                            <option className=""><span className='bg-danger'>op 1 Select Countery</span></option>
+                            <option selected className="box"> Select Countery</option>
                             <option className="box">us</option>
                             <option className="box">uk</option>
                             <option className="box">pk</option>

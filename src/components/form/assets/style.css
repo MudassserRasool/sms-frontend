@@ -7,12 +7,12 @@
 }
 
 /* srtyling selector options */
-/* .box { */
-  /* border: 1px solid #999; */
-  /* font-size: 16px; */
-  /* color: #9d9c9c; */
-  /* opacity: 10%; */
-/* } */
+.box {
+  border: 1px solid #999;
+  font-size: 16px;
+  color: #9d9c9c;
+  opacity: 10%;
+}
 
 /* Styling button color red */
 .btn-coustom {
@@ -27,14 +27,19 @@
   margin-top: 120px;
 }
 
-
 .custom-opacity {
   opacity: 43%; /* Change this value to adjust the opacity level */
-  border: 1px solid rgb(153, 152, 152); 
+  border: 1px solid rgb(153, 152, 152);
   font-size: 17px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.custom-opacity box{
-color: black;
+.custom-opacity box {
+  color: black;
+}
+
+
+#selectCountery *{
+  color: #ff0000;
+  opacity: 10%;
 }

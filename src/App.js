@@ -1,5 +1,7 @@
 import React from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import '../node_modules/bootstrap-select/dist/css/bootstrap-select.min.css'
+// import 'bootstrap-select/dist/js/bootstrap-select.min.js'
 import Form from "./components/form/Form";
 // import Table from './components/table/Table'
 import Table from "./Table";
