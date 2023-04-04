@@ -34,3 +34,8 @@ th,
 td {
   padding: 0 10px;
 }
+
+/* Remove the underline of the Link tag */
+.mylinkclass {
+  text-decoration: none;
+}
