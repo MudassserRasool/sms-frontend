@@ -6,11 +6,13 @@ import SmsLog from './components/smslog/SmsLog.jsx'
 
 import { Router, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
+import CheckMe from "./components/smslog/CheckMe";
 
 const App = () => {
+  
   return (
     <div>
-    
+    <CheckMe/>
       {/* <Example/> */}
       <Routes>
         <Route path="/" element={<Form />} />
