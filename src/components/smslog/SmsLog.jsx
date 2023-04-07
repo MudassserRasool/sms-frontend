@@ -1,6 +1,6 @@
-import { React, useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Button, Popover, OverlayTrigger, Overlay } from "react-bootstrap";
 import "./assets/style.css";
-
 const SmsLog = () => {
   const [smsData, setsmsData] = useState([]);
   const [input, setinput] = useState("");
@@ -19,8 +19,19 @@ const SmsLog = () => {
     setinput(inputValue);
     console.log(input);
   };
-  
 
+  // popover
+  const popover = (
+    <Popover id="popover-basic">
+      {/* <Popover.Header as="h3">Popover right</Popover.Header> */}
+      <Popover.Body>
+        
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem, ipsum dolor.</p>
+      </Popover.Body>
+    </Popover>
+  );
   return (
     <div>
       <div className="container mt-4 mx-auto">
@@ -56,10 +67,19 @@ const SmsLog = () => {
                   <td>{index + 1}</td>
                   <td>{smsMapedData.messageId}</td>
                   <td>{smsMapedData.phones}</td>
-                  {smsMapedData.meta.map((maped) => (
+                  {/* {smsMapedData.meta.map((maped) => (
                       <td>{maped.status}</td>
                   
-                  ))}
+                  ))} */}
+                  <td>
+                    <OverlayTrigger
+                      trigger="click"
+                      placement="top"
+                      overlay={popover}
+                    >
+                      <Button variant="success">Status</Button>
+                    </OverlayTrigger>
+                  </td>
                   <td>{smsMapedData.createdAt}</td>
                 </tr>
               ))}
