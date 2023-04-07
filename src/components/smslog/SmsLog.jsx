@@ -10,25 +10,29 @@ const SmsLog = () => {
       .then((res) => res.json())
       .then((smsData) => {
         setsmsData(smsData.data);
-        console.log(smsData);
       });
   }, []);
-
   const handelInput = (e) => {
     const inputValue = e.target.value;
     setinput(inputValue);
     console.log(input);
   };
 
+
   // popover
-  const popover = (
+  const popover = (meta) =>
+   (
     <Popover id="popover-basic">
-      {/* <Popover.Header as="h3">Popover right</Popover.Header> */}
       <Popover.Body>
-        
-        <p>Lorem, ipsum dolor.</p>
-        <p>Lorem, ipsum dolor.</p>
-        <p>Lorem, ipsum dolor.</p>
+        {
+        // smsData.map((maped) => (
+          // <p>{mapf.meta}</p>
+          // maped.
+          meta.map((mapedMeta)=>(
+            <p>{mapedMeta.status} : <span>{mapedMeta.timestamp}</span></p>
+          ))
+        // ))
+        }
       </Popover.Body>
     </Popover>
   );
@@ -49,9 +53,7 @@ const SmsLog = () => {
               <th style={{ width: "10%" }}>#</th>
               <th style={{ width: "10%" }}>Sms ID</th>
               <th style={{ width: "20%" }}>Phone</th>
-              <th colspan="3" style={{ width: "40%" }}>
-                Status
-              </th>
+              <th style={{ width: "40%" }}>Status</th>
               <th style={{ width: "20%" }}>Date</th>
             </tr>
           </thead>
@@ -75,7 +77,7 @@ const SmsLog = () => {
                     <OverlayTrigger
                       trigger="click"
                       placement="top"
-                      overlay={popover}
+                      overlay={popover(smsMapedData.meta)}
                     >
                       <Button variant="success">Status</Button>
                     </OverlayTrigger>
