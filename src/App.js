@@ -6,6 +6,7 @@ import SmsLog from './components/smslog/SmsLog.jsx'
 
 import { Router, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Navbar from "./components/navbar/Navbar";
 // import CheckMe from "./components/smslog/CheckMe";
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
     <div>
     {/* <CheckMe/> */}
       {/* <Example/> */}
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Form />} />
         <Route path="/table" element={<Table />} />

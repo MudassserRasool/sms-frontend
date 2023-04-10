@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./assets/styles.css";
 import { CredentialService } from "../../shared/services/credentials";
-// import { CredentialService } from "../src/shared/services/credentials";
 import { MDBTooltip } from "mdb-react-ui-kit";
 import { Button, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -132,10 +131,10 @@ const Table = () => {
   };
 
   // useNavigate
-  const navigate = useNavigate();
-  const naviagateToForm = () => {
-    navigate("/");
-  };
+  // const navigate = useNavigate();
+  // const naviagateToForm = () => {
+  //   navigate("/");
+  // };
   
 
   //   Render after select the twilio open three fiels
@@ -199,9 +198,9 @@ const Table = () => {
   return (
     <div>
       <div className="container mt-4">
-        <button className="btn btn-danger my-2" onClick={naviagateToForm}>
+        {/* <button className="btn btn-danger my-2" onClick={naviagateToForm}>
           Navigate To Form
-        </button>
+        </button> */}
 
         {/* Button and heading area */}
         <div class="d-flex justify-content-between ">
@@ -240,8 +239,8 @@ const Table = () => {
               <th style={{ width: "10%" }}>Enable</th>
               <th style={{ width: "15%" }}>Type</th>
               <th style={{ width: "15%" }}>Provider</th>
-              <th style={{ width: "30%" }}>Credentials</th>
-              <th style={{ width: "10%" }}>Action</th>
+              <th style={{ width: "20%" }}>Credentials</th>
+              <th style={{ width: "20%" }}>Action</th>
             </tr>
           </thead>
           <tbody>

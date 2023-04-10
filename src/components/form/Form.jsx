@@ -195,16 +195,16 @@ const Form = () => {
     };
 
 // useNavigate
-const navigate = useNavigate()
-const naviagateToTable = ()=>{
-navigate('/table')
-}
+// const navigate = useNavigate()
+// const naviagateToTable = ()=>{
+// navigate('/table')
+// }
     return (
 
         
         <div>
             <div className="container mt-4">
-            <button className='btn btn-primary' onClick={naviagateToTable}>Navigate to Table</button>
+            {/* <button className='btn btn-primary' onClick={naviagateToTable}>Navigate to Table</button> */}
                 {/* Start form */}
                 <form className="row g-3 mt-4" onSubmit={handelSubmitForm}>
                     <h5>Create New Credential</h5>

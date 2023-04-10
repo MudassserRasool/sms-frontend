@@ -29,7 +29,7 @@ const SmsLog = () => {
           // <p>{mapf.meta}</p>
           // maped.
           meta.map((mapedMeta)=>(
-            <p>{mapedMeta.status} : <span>{mapedMeta.timestamp}</span></p>
+            <p>{mapedMeta.status} : <span>{new Date(mapedMeta.timestamp).toLocaleString()}</span></p>
           ))
         // ))
         }
@@ -53,8 +53,8 @@ const SmsLog = () => {
               <th style={{ width: "10%" }}>#</th>
               <th style={{ width: "10%" }}>Sms ID</th>
               <th style={{ width: "20%" }}>Phone</th>
-              <th style={{ width: "40%" }}>Status</th>
-              <th style={{ width: "20%" }}>Date</th>
+              <th style={{ width: "20%" }}>Status</th>
+              <th style={{ width: "40%" }}>Date</th>
             </tr>
           </thead>
           <tbody>
